@@ -2,8 +2,8 @@
 
 ## 内容
 
-- [稀疏 sparsearray 数组](./data_structures/sparsearray/)
-- [队列](./data_structures/queue/)
+- [稀疏 sparsearray 数组](./data_structures/src/com/yanbingxu/sparsearray/)
+- [队列](./data_structures/src/com/yanbingxu/queue/)
 
 ---
 ## 联系
