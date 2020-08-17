@@ -1,10 +1,24 @@
 # DataStructures and Algorithms
 
+![hey](https://img.shields.io/badge/Hey!-Bro~-important)
+
+> - About: [源志bx](http://blog.yanbingxu.com/about/)
+> - 该项目为学习 Java 数据结构与算法所用, 如有错误欢迎指
+> - 文档在个人博客中编写, 欢迎访问 [blog.yanbingxu.com](http://blog.yanbingxu.com/)
+
+
 ## 内容
 
 - [稀疏 sparsearray 数组](./data_structures/src/com/yanbingxu/sparsearray/)
 - [队列](./data_structures/src/com/yanbingxu/queue/)
-- [队列](./data_structures/src/com/yanbingxu/queue/)
+- [链表](./data_structures/src/com/yanbingxu/linkedlist/)
+
+```
+├─data_structures
+│  ├─sparsearray
+│  ├─queue
+│  └─linkedlist
+```
 
 ---
 
