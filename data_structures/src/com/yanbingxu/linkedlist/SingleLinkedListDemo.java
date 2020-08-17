@@ -33,6 +33,18 @@ public class SingleLinkedListDemo {
 
         // 显示
         singleLinkedList.list();
+
+        // 修改节点
+        HeroNode newHeroNode = new HeroNode(1, "暗凯", "ClearLove7");
+        singleLinkedList.update(newHeroNode);
+        System.out.println("----------修改后的链表----------");
+        singleLinkedList.list();
+
+        // 删除节点
+        singleLinkedList.del(1);
+        singleLinkedList.del(4);
+        System.out.println("----------删除后的链表----------");
+        singleLinkedList.list();
     }
 
 }
@@ -107,6 +119,75 @@ class SingleLinkedList {
             // 插入到链表中 (temp 后)
             heroNode.next = temp.next;
             temp.next = heroNode;
+        }
+    }
+
+    /**
+     * 修改节点信息
+     * 根据 no 编号来修改, 即 no 编号不能改
+     * 根据 newHeroNode 的 no 来修改
+     */
+    public void update(HeroNode newHeroNode) {
+        // 判断是否为空
+        if (head.next == null) {
+            System.out.println("链表为空~~~");
+            return;
+        }
+        // 创建一个辅助变量 temp
+        HeroNode temp = head.next;
+        // 表示是否找到该节点
+        boolean flag = false;
+
+        while (true) {
+            if (temp == null) {
+                // 链表遍历完毕
+                break;
+            }
+            if (temp.no == newHeroNode.no) {
+                flag = true;
+                break;
+            }
+            temp = temp.next;
+        }
+
+        // 根据 flag 判断是否找到要修改的节点
+        if (flag) {
+            temp.name = newHeroNode.name;
+            temp.nickname = newHeroNode.nickname;
+        } else {
+            // 没找到该节点
+            System.out.printf("没有找到编号 [%d] 的节点, 不能修改~~~", newHeroNode.no);
+        }
+    }
+
+    /**
+     * 删除节点信息
+     * 1. 定义一个 temp 辅助节点找到待删除节点的前一个节点
+     * 2. 比较时, 是 temp.next.no 和需要删除的节点的 no 比较
+     */
+    public void del(int no) {
+        HeroNode temp = head;
+        // 标识是否找到待删除节点
+        boolean flag = false;
+
+        while (true) {
+            if(temp.next == null) {
+                // 到达链表最后
+                break;
+            }
+            if (temp.next.no == no) {
+                // 找到待删除节点的前一个节点 temp
+                flag = true;
+                break;
+            }
+            // 后移, 遍历当前链表
+            temp = temp.next;
+        }
+
+        if (flag) {
+            temp.next = temp.next.next;
+        } else {
+            System.out.printf("没有找到编号 [%d] 的节点, 不能修改~~~", no);
         }
     }
 
