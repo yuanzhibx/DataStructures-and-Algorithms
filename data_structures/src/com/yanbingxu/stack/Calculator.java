@@ -9,7 +9,7 @@ package com.yanbingxu.stack;
 public class Calculator {
 
     public static void main(String[] args) {
-        String expression = "3+2*6-2";
+        String expression = "70+20*6-4";
         // 创建数栈
         ArrayStack2 numStack = new ArrayStack2(10);
         // 创建符号栈
@@ -22,6 +22,8 @@ public class Calculator {
         int res = 0;
         // 将每次扫描得到 char 保存到 ch
         char ch = ' ';
+        // 用于拼接多位数
+        String keepNum = "";
 
         // 循环扫描 expression
         while (true) {
@@ -50,8 +52,25 @@ public class Calculator {
                     operStack.push(ch);
                 }
             } else {
-                // 如果是数, 则直接入数栈 (ASCII 码转换 - 48)
-                numStack.push(ch - 48);
+                /*
+                    需考虑多位数情况, 处理数时, 需要向 expression 的表达式的 index 后再看一位, 如果是数就信息扫描, 如果是符号才入栈
+                    因此我们需要定义一个字符串变量, 用于拼接
+                 */
+                // 处理多位数
+                keepNum += ch;
+
+                // 如果 ch 已经是 expression 的最后一位, 就直接入栈
+                if (index == expression.length() - 1) {
+                    numStack.push(Integer.parseInt(keepNum));
+                } else {
+                    // 判断下一个字符是不是数字, 如果是数字, 就继续扫描, 如果是运算符, 则入栈 (是看后面一位, 不是 index++)
+                    if (operStack.isOper(expression.substring(index + 1, index + 2).charAt(0))) {
+                        // 如果后一位是运算符, 则入栈 (keepNum = "1" 或 "123" 转 int)
+                        numStack.push(Integer.parseInt(keepNum));
+                        // 清空 keepNum
+                        keepNum = "";
+                    }
+                }
             }
             // index + 1 , 判断是否扫描到 expression 最后
             index++;
