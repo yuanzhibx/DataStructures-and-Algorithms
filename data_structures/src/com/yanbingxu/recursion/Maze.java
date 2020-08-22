@@ -20,7 +20,9 @@ public class Maze {
         System.out.println("--------------");
 
         // 使用递归回溯来给小球找路
-        setWay(map, 1, 1);
+//        setWay(map, 1, 1);
+        setWay2(map, 1, 1);
+
         // 输出新地图
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 7; j++) {
@@ -50,6 +52,9 @@ public class Maze {
         // 设置挡板, 使用 1 表示
         map[3][1] = 1;
         map[3][2] = 1;
+        // 测试回溯现象
+//        map[1][2] = 1;
+//        map[2][2] = 1;
         return map;
     }
 
@@ -101,4 +106,44 @@ public class Maze {
         }
     }
 
+    /**
+     * 修改找路策略(方法): 上 -> 右 -> 下 -> 左 (如果该点走不通, 再回溯)
+     *
+     * @param map 表示地图
+     * @param i   表示从哪个位置开始出发 (1, 1)
+     * @param j   表示从哪个位置开始出发
+     * @return 如果找到通路, 返回 true, 否则返回 false
+     */
+    public static boolean setWay2(int[][] map, int i, int j) {
+        if (map[6][5] == 2) {
+            // 通路已经找到
+            return true;
+        } else {
+            if (map[i][j] == 0) {
+                // 该点还没走过, 按照策略走: 下 -> 右 -> 上 -> 左
+                // 假定该点可以走通
+                map[i][j] = 2;
+                if (setWay2(map, i - 1, j)) {
+                    // 向上走
+                    return true;
+                } else if (setWay2(map, i, j + 1)) {
+                    // 向右走
+                    return true;
+                } else if (setWay2(map, i + 1, j)) {
+                    // 向下走
+                    return true;
+                } else if (setWay2(map, i, j - 1)) {
+                    // 向左走
+                    return true;
+                } else {
+                    // 该点走不通, 是死路
+                    map[i][j] = 3;
+                    return false;
+                }
+            } else {
+                // 如果 map[i][j]!=0 (可能是 1 2 3)
+                return false;
+            }
+        }
+    }
 }
