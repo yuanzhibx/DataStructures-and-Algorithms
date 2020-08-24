@@ -9,11 +9,18 @@
 ---
 ## 内容
 
-- [稀疏 sparsearray 数组](./data_structures/src/com/yanbingxu/sparsearray/)
-- [队列](./data_structures/src/com/yanbingxu/queue/)
-- [链表](./data_structures/src/com/yanbingxu/linkedlist/)
-- [栈](./data_structures/src/com/yanbingxu/stack/)
-- [递归](./data_structures/src/com/yanbingxu/recursion/)
+<div style="text-align: center">
+    <a href="./data_structures/src/com/yanbingxu/sparsearray/"> 稀疏数组 sparsearray </a>
+    <br>
+    <a href="./data_structures/src/com/yanbingxu/queue/"> 队列 queue </a>
+    <br>
+    <a href="./data_structures/src/com/yanbingxu/linkedlist/"> 链表 linkedlist </a>
+    <br>
+    <a href="./data_structures/src/com/yanbingxu/stack/"> 栈 stack </a>
+    <br>
+    <a href="./data_structures/src/com/yanbingxu/recursion/"> 递归 recursion </a>
+    <br>
+</div>
 
 ```
 ├─data_structures
