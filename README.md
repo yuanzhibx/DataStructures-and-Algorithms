@@ -14,6 +14,7 @@
 - [链表](./data_structures/src/com/yanbingxu/linkedlist/)
 - [栈](./data_structures/src/com/yanbingxu/stack/)
 - [递归](./data_structures/src/com/yanbingxu/recursion/)
+- [排序算法](./data_structures/src/com/yanbingxu/sort/)
 
 ```
 ├─data_structures
@@ -21,7 +22,8 @@
 │  ├─queue
 │  ├─linkedlist
 │  ├─stack
-│  └─recursion
+│  ├─recursion
+│  └─sort
 └─Algorithm
 ```
 
