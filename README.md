@@ -9,18 +9,11 @@
 ---
 ## 内容
 
-<div style="text-align: center">
-    <a href="./data_structures/src/com/yanbingxu/sparsearray/"> 稀疏数组 sparsearray </a>
-    <br>
-    <a href="./data_structures/src/com/yanbingxu/queue/"> 队列 queue </a>
-    <br>
-    <a href="./data_structures/src/com/yanbingxu/linkedlist/"> 链表 linkedlist </a>
-    <br>
-    <a href="./data_structures/src/com/yanbingxu/stack/"> 栈 stack </a>
-    <br>
-    <a href="./data_structures/src/com/yanbingxu/recursion/"> 递归 recursion </a>
-    <br>
-</div>
+- [稀疏 sparsearray 数组](./data_structures/src/com/yanbingxu/sparsearray/)
+- [队列](./data_structures/src/com/yanbingxu/queue/)
+- [链表](./data_structures/src/com/yanbingxu/linkedlist/)
+- [栈](./data_structures/src/com/yanbingxu/stack/)
+- [递归](./data_structures/src/com/yanbingxu/recursion/)
 
 ```
 ├─data_structures
@@ -39,11 +32,12 @@
 - **链表**: [【Java 数据结构与算法 02】链表](http://blog.yanbingxu.com/2020/08/17/%E9%93%BE%E8%A1%A8/)
 - **栈**: [【Java 数据结构与算法 03】栈](http://blog.yanbingxu.com/2020/08/19/%E6%A0%88/)
 - **递归**: [【Java 数据结构与算法 04】递归](http://blog.yanbingxu.com/2020/08/22/%E9%80%92%E5%BD%92/)
+- **排序算法**: [【Java 数据结构与算法 05】排序算法](http://blog.yanbingxu.com/2020/08/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/)
 
 ---
 ## 联系
 
-- `网站 1(博客)：` [blog.yanbingxu.com](https://blog.yanbingxu.com/)
-- `网站 2(项目)：` [yanbingxu.com](http://yanbingxu.com/) (建设中)
-- `CSDN：` [me.csdn.net/qq_44153697](https://me.csdn.net/qq_44153697)
-- `Email：` <ybx0729@163.com>
+- [Blog @Yuanzhibx’s blog](http://blog.yanbingxu.com/)
+- [GitHub @yuanzhibx](https://github.com/yuanzhibx)
+- [Bilibili @源志bx](https://space.bilibili.com/177628303)
+- [CSDN @源志bx](https://blog.csdn.net/qq_44153697)
