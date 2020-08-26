@@ -34,12 +34,14 @@ public class InsertSort {
      * @param arr
      */
     private static void insertSort(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            // 待插入的数
-            int insertVal = arr[i];
-            // 待插入数的前一个数下标
-            int insertIndex = i - 1;
+        // 待插入的数
+        int insertVal = 0;
+        // 待插入数的前一个数下标
+        int insertIndex = 0;
 
+        for (int i = 1; i < arr.length; i++) {
+            insertVal = arr[i];
+            insertIndex = i - 1;
             /*
                 给 insertVal 找到插入的位置
                     insertIndex >= 0 保证在给 insertVal 找插入位置时不越界
