@@ -23,7 +23,8 @@
 │  ├─linkedlist
 │  ├─stack
 │  ├─recursion
-│  └─sort
+│  ├─sort
+│  └─search
 └─Algorithm
 ```
 
